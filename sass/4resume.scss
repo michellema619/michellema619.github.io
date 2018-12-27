@@ -1,0 +1,71 @@
+@import '0header';
+
+$primary-pink: #ffe6ea;
+$text-gray: #595959; 
+
+$primary-font: 'Roboto Slab', serif;
+
+
+// Mobile
+body {
+	background-color: white;
+	color: $text-gray;
+	font-family: $primary-font;
+	padding: 0;
+	margin: 0;
+}
+#all {
+	width: 100%;
+	// font-weight: bold;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 120px;
+	h2 {
+		text-align: center;
+	}
+	.row {
+		max-width: 800px;
+		margin: 40px auto 60px auto;
+		.plus { 
+			padding-right: 0px;
+			font-size: 16pt;
+			text-align: right;
+			margin-top: 0px;
+			span {
+				padding: 5px;
+			}
+		}
+		.plus:hover {
+			cursor: pointer;
+		}
+		.title {
+			font-size: 15pt;
+			text-decoration: underline;
+			text-decoration-color: $primary-pink;
+			text-decoration-style: double;
+			padding-bottom: 10px;
+		}
+		.text {
+			padding-bottom: 20px;
+			.underline {
+				text-decoration: underline;
+				text-decoration-color: $primary-pink;
+				text-decoration-style: double;
+			}
+			.click:hover {
+				cursor: pointer;
+			}
+			.expand {
+				display: none;
+			}
+		}
+	}
+	#row-skills {
+		.col-md-2 {
+			padding-right: 0px;
+		}
+		.text {
+			padding-bottom: 10px;
+		}
+	}
+}

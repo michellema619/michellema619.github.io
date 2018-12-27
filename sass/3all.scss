@@ -1,0 +1,58 @@
+@import '0header';
+
+$primary-pink: #ffe6ea;
+$text-gray: #595959; 
+
+$primary-font: 'Roboto Slab', serif;
+
+// Mobile
+body {
+	background-color: white;
+	color: $text-gray;
+	font-family:$primary-font;
+	padding: 0;
+	margin: 0;
+}
+#all {
+	// font-weight: bold;
+	margin: 120px 2%;
+	h2 {
+		padding-left: 5%;
+		padding-bottom: 15px;
+	}
+	h4 {
+		font-size: 13pt;
+		padding-left: 5%;
+	}
+	#filter-buttons {
+		width: 100%;
+		margin-left: 5%;
+		display: flex;
+		flex-direction: row;
+		flex-wrap: nowrap;
+		justify-content: left;
+		.filter-button {
+			background-color: white;
+			color: $text-gray;
+			font-size: 11pt;
+			margin-right: 5px;
+			padding: 5px 10px;
+			border: 0.5px solid $text-gray;
+			border-radius: 3px;
+			cursor: pointer;
+		}
+		.filter-button:hover {
+			background-color: rgba(255,230,234,0.6);
+		}
+	}
+	#all-shuffle {
+		width:100%;
+		margin: 50px auto;
+		.shuffle-image {
+			width: 40%;
+			display: block;
+			margin-left: 5%;
+			margin-bottom: 5%;
+		}
+	}
+}

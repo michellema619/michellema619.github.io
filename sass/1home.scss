@@ -1,0 +1,226 @@
+@import '0header';
+
+$welcome-gray: #595959;
+$primary-pink: #ffe6ea;
+$text-gray: #595959; 
+
+$primary-font: 'Roboto Slab', serif;
+
+// Mobile
+body {
+	height: 100%;
+	overflow: hidden;
+}
+#welcome {
+	background-color: $welcome-gray;
+	width: 100%;
+	height: 100%;
+	overflow: auto;
+	display: block;
+	position: absolute;
+	left: 0;
+	top: 0;
+	z-index: 99;
+	#gif {
+		width: 70%;	
+		display: block;
+		padding: 2% 1%;
+		position: absolute;
+		left: 14%;
+		top: 28%;
+	}
+	#gif:hover {
+		background-color: #808080;
+		cursor: pointer;
+	}
+	.text {
+		color: $primary-pink;
+		opacity: 0.6;
+	}
+	#arrow {
+		font-size: 45pt;
+		position: absolute;
+		left: 50%;
+		top: 50%;
+	}
+	#click {
+		font-family: $primary-font;
+		font-size: 12pt;
+		position: absolute;
+		left: 42%;
+		top: 62%;
+	}
+	#click:hover {
+		cursor: pointer;
+	}
+}
+.fadeOut {
+	transition: all 1s ease-in-out;
+	opacity: 0;
+}
+body {
+	background-color: $welcome-gray;
+	color: $text-gray;
+	padding: 0;
+	margin: 0;
+}
+#all {
+	margin-top: 80px;
+	margin-bottom: 150px;
+	position: relative;
+	opacity: 0;
+	.parallax {
+		background-image: url("../images/1welcome.jpg");
+		height: 500px;
+		background-attachment: fixed;
+		background-position: center;
+		background-repeat: no-repeat;
+		background-size: cover;
+	}
+	.text {
+		font-family: $primary-font;
+		// font-weight: bold;
+		text-align: center;
+	}
+	.dash {
+		padding: 10px 0px;
+	}
+	#welcome-msg {
+		font-size: 14pt;
+		padding: 30px 30px 15px 30px;
+	}
+	#welcome-body {
+		font-size: 11pt;
+		max-width: 85%;
+		margin: auto;
+		padding: 15px 30px;
+	}
+	#welcome-connect {
+		font-size: 14pt;
+		padding: 10px 0px;
+	}
+	#connect {
+		max-width: 100%;
+		height: 30px;
+		position: relative;
+		.connect-icons {
+			max-width: 12%;
+			border-radius: 50%;
+			position: absolute;
+			top: 0%;
+		}
+		.connect-icons:nth-child(1) {
+			left: 36%;
+		}
+		.connect-icons:nth-child(2) {
+			left: 51%;
+		}
+		#connect-info {
+			margin-left: auto;
+			margin-right: auto;
+			padding-top: 13%;
+			a {
+				color: $text-gray;
+				text-decoration: none;
+			}
+		}
+		.connect-icons:hover {
+			transition: all 0.5s ease-in-out;
+			transform: rotate(360deg);
+			filter: drop-shadow(0 0  30px #ff002b);
+		}
+	}
+}
+
+
+// Tablet
+@media ( min-width: 767px ) {
+	#welcome {
+		#gif {
+			top: 21%;
+		}
+		#arrow {
+			top: 56%;
+		}
+		#click {
+			top: 68%;
+			left: 45%;
+		}
+	}
+	#all {
+		.parallax {
+			background-image: url("../images/1welcome_doodled1.jpg");
+			height: 620px;
+		}
+		#welcome-msg {
+			visibility: hidden;
+		}
+		#welcome-dash {
+			display: none;
+		}
+		#welcome-body {
+			max-width: 80%;
+			margin-top: -50px;
+		}
+		#connect {
+			max-width: 60%;
+			margin-left: 27%;
+			margin-right: 25%;
+			.connect-icons {
+				max-width: 16%;
+			}
+			.connect-icons:nth-child(1) {
+				left: 32%;
+			}
+			.connect-icons:nth-child(2) {
+				left: 50%;
+			}
+			#connect-info {
+				padding-top: 18%;
+			}
+		}
+	}
+}
+
+
+// Desktop > 992px
+@media ( min-width: 992px ) {
+	#welcome {
+		#gif {
+			max-width: 650px;
+			top: 21%;
+			left: 22%;
+		}
+		#arrow {
+			top: 59%;
+			left: 49%;
+		}
+		#click {
+			top: 71%;
+			left: 45%;
+		}
+	}
+	#all {
+		.parallax {
+			background-image: url("../images/1welcome_doodled2.jpg");
+		}
+		#welcome-body {
+			padding-top: 20px;
+		}
+		#connect {
+			.connect-icons {
+				max-width: 12%;
+			}
+			.connect-icons:nth-child(1) {
+				left: 36%;
+			}
+			.connect-icons:nth-child(2) {
+				left: 49%;
+			}
+			#connect-info {
+				padding-top: 13%;
+			}
+		}
+	}
+
+}

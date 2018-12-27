@@ -1,0 +1,117 @@
+//Mobile
+#header {
+	background-color: #ffe6ea;
+	width: 100%;
+	height: 80px;
+	position: fixed;
+	top: 0;	
+	z-index: 2;
+}
+#home-logo {
+	width: 150px;
+	position: absolute;
+	left: 2%;
+	top: 10px;
+}
+#tabs {
+	#mobileMenu {
+		width: 40px;
+		padding: 8px;
+		position: absolute;
+		right: 4%;
+		top: 18px;
+	}
+	#mobileMenu:hover {
+		background-color: white;
+		cursor: pointer;
+	}
+	#tabs-ul {
+		background-color: rgba(250,250,250,0.85);
+		font-family: 'Cinzel', serif;
+		width: 100%;
+		text-align: center;
+		list-style: none;
+		padding: 0;
+		position: absolute;
+		top: 64px;
+		left: 1000px;
+		transition: all 0.5s ease-in-out;
+		a {
+			color: #4d4d4d;
+			width: 20%;
+			text-decoration: none;
+			display: block;
+			padding: 2% 0%;
+			float: left;
+		}
+		li:hover, a:hover {
+			background-color: rgba(217,217,217,0.8);
+		}
+		#subtabs {
+			display: none;
+		}
+	}
+}
+.slideIn {
+	transform: translate(-1000px,0px);
+}
+
+
+// Desktop
+@media ( min-width: 992px ) {
+	#mobileMenu {
+		display: none;
+	}
+	#tabs {
+		#tabs-ul {
+			background-color: transparent;
+			max-width: 600px;
+			position: absolute;
+			top: 0px;
+			left: auto;
+			right: -3%;
+			li {
+				padding-left: 1%;
+				padding-right: 1%;
+			}
+			a {
+				width: 18%;
+			}
+			li:hover, a:hover {
+				background-color: rgba(250,250,250,0.8);
+			}
+			#portfolio-tab {
+				position: relative;
+				#subtabs {
+					background-color: rgba(250,250,250,0.9);
+					padding-top: 20px;
+					position: absolute;
+					top: 45px;
+					left: 218px;
+					ul {
+						list-style: none;
+						padding: 0;
+						li {
+							max-width: 106px;
+							height: 30px;
+							text-align: center;
+							padding-top: 5px;
+						}
+						a {
+							width: 100%;
+						}
+					} 
+					li:nth-child(2) {
+						height: 50px;
+					}
+				}
+			}
+			#portfolio-tab:hover #subtabs {
+				display: flex;
+			}
+			.subtabs:hover, .subtabs:hover a {
+				background-color: rgba(217,217,217,0.8);
+			}
+		}
+	}
+}

@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>About | Michelle Ma Portfolio</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<link rel="stylesheet" href="css/2about.css">
+	<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+	
+	<link href="https://fonts.googleapis.com/css?family=Cinzel|Lovers+Quarrel|Roboto+Slab:100" rel="stylesheet">
+</head>
+<body>
+	<div id="header">
+		<img id="home-logo" src="images/final_logo.png">
+
+		<div id="tabs">
+			<img id="mobileMenu" src="images/mobileMenu.png">
+			<ul id="tabs-ul">
+				<li id="home-tab"><a href="index.html"> Home </a></li>
+				<li id="about-tab"><a href="2about.html"> About </a></li>
+				<div id="portfolio">
+					<li id="portfolio-tab"><a href="3all.html"> Portfolio </a>
+					</li>
+				</div>
+				<li id="resume-tab"><a href="4resume.html"> Resume </a></li>
+				<li id="contact-tab"><a href="5contact.html"> Contact </a></li>
+			</ul>
+		</div> <!-- end of tabs -->
+	</div> <!-- end of header-->
+
+<!-- ALL CONTENT -->
+	<div id="all">
+		<div id="intro" class="container">
+			<img id="dp" src="images/2dp.jpg">
+
+			<h2 data-aos="zoom-in-up" data-aos-duration="600">About Me</h2>
+
+			<p class="paragraph" data-aos="zoom-in-up" data-aos-offset="280" data-aos-duration="1200">
+				I am a third culture kid who grew up in Asia, but received Western education. My upbringing helped shape my global mindset and trained me to be flexible in adapting to a new environment. As a result of this, there are three places I call home: <i>Taipei</i>, <i>Shanghai</i>, and <i>Los Angeles</i>. 
+			</p>
+
+			<div class="hr" id="hr1"><hr></div>
+
+			<div id="about-img-div">
+				<img id="about-img" src="images/2about.png">
+				<div class="blocks" id="tw-block"></div>
+				<div class="blocks" id="sh-block"></div>
+				<div class="blocks" id="la-block"></div>
+
+				<p id="click" data-aos="fade-up" data-aos-duration="800">Click on a location above or scroll dodwn to learn more about my background!</p>
+			</div>
+
+			<div class="hr" id="hr2"><hr></div>
+		</div>
+		<div id="background">
+			<div class="empty" id="tw-empty"></div>
+			<div class="background-class" id="tw-backgruond">
+				<h4 data-aos="zoom-in-up">Taipei, Taiwan</h4>
+				<p class="paragraph" id="taiwan" data-aos="zoom-in-up" data-aos-delay="200">
+					I am full Taiwanese! 
+					<br><br>
+					Born and raised in Taipei for the first nine years of my life, Taiwan is where I call home! Even though my time there was short, I was fully immersed in the culture. 
+					<br><br>
+					Ever since I moved, the thing I missed the most, other than my family, is the food. From night market street foods to other traditional dishes, Taiwan is the go-to place if you want good food without breaking the bank. 
+				</p>
+				<img class="cities" src="images/tw.JPG">
+			</div>
+
+			<div class="empty" id="sh-empty"><hr></div>
+			<div class="background-class">
+				<h4 data-aos="zoom-in-up">Shanghai, China</h4>
+				<p class="paragraph" id="shanghai" data-aos="zoom-in-up" data-aos-delay="200">
+					When I was nine, my family moved to Shanghai. This was the first big change in my life. Not only did I have to start over in a new country, but transitioning to an all-English school and environment was even harder. 
+					<br><br>
+					Although it was challenging, it helped me grow as a person. Within the international schools I attended, I met people from all over the world and developed a global perspective that now sets me apart from others.  
+				</p>
+				<img class="cities" src="images/sh.JPG">
+			</div>
+
+			<div class="empty" id="la-empty"><hr></div>
+			<div class="background-class">
+				<h4 data-aos="zoom-in-up">Los Angeles, California</h4>
+				<p class="paragraph" id="los-angeles" data-aos="zoom-in-up" data-aos-delay="200">
+					For college, I moved across the world to sunny California for USC. Going into my fourth year, I'm still loving the warm weather, diverse culture and endless advertures every single day.
+					<br><br>
+					Can't wait to see where the next chapter of my life will take me!
+				</p>
+				<img class="cities" src="images/la.jpg">
+			</div>
+		</div>
+	</div> <!-- end of ALL CONTENT -->
+
+	<script src="jquery-3.2.1.min.js"></script>
+	<script src="0header.js"></script>
+	<script src="force-js-master/src/force.js" type="text/javascript"></script>
+	<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+	<script>
+		// Current tab
+		document.querySelector("#about-tab").style.fontWeight = "bold";
+		document.querySelector("#about-tab").onmouseenter = function() {
+			document.querySelector("#about-tab").style.backgroundColor = "inherit";
+			document.querySelector("#about-tab a").style.cursor = "default";
+		}
+
+		// Force Plugin - about image
+		var tw = document.querySelector("#tw-empty");
+		document.querySelector("#tw-block").onclick = function() {
+			force.jump(tw);
+		}
+
+		var sh = document.querySelector("#sh-empty");
+		document.querySelector("#sh-block").onclick = function() {
+			force.jump(sh);
+		}
+
+		var la = document.querySelector("#la-empty");
+		document.querySelector("#la-block").onclick = function() {
+			force.jump(la);
+		}
+
+		
+		// AOS plugin
+		AOS.init();
+	</script>
+
+</body>
+</html>

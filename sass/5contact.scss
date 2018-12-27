@@ -1,0 +1,135 @@
+@import '0header';
+
+$primary-pink: #ffe6ea;
+$text-gray: #595959; 
+
+$primary-font: 'Roboto Slab', serif;
+
+
+// Mobile
+body {
+	background-color: white;
+	color: $text-gray;
+	font-family: $primary-font;
+	padding: 0;
+	margin: 0;
+}
+#all {
+	margin-top: 70px;
+	.parallax {
+		background-image: url("../images/5dp.jpg");
+		height: 520px;
+		background-attachment: fixed;
+		background-position: center;
+		background-repeat: no-repeat;
+		background-size: cover;
+		position: relative;
+	}
+	h2 {
+		color: white;
+		font-family: 'Lovers Quarrel', cursive;
+		font-size: 18pt;
+		text-shadow: 2px 2px 4px $text-gray;
+		position: fixed;
+		top: 47%;
+		left: 48%;
+	}
+	#connect {
+		background-color: white;
+		width: 100%;
+		height: 200px;
+		position: absolute;
+		.section {
+			width: 60%;
+			font-size: 14pt;
+			// font-weight: bold;
+			margin-left: auto;
+			margin-right: auto;
+		 	a:active {
+		 		color: $text-gray;
+		 	}
+			.connect-icons:hover ~ a, 
+			#connect-info1:hover, 
+			#connect-info2:hover {
+				text-shadow: 3px 3px $primary-pink;
+			}
+		 }
+		 #section-email {
+		 	margin-top: 5%;
+		 	position: relative;
+		 	a {
+		 		color: $text-gray;
+		 		text-decoration: none;
+		 		width: 100%;
+		 		position: absolute;
+		 		top: 15px;
+		 		left: 80px;
+		 	}
+		 }
+		 #section-linkedin {
+		 	position: relative;
+		 	a {
+		 		color: $text-gray;
+		 		font-size: 13pt;
+		 		width: 70%;
+		 		word-wrap: break-word;
+		 		text-decoration: none;
+		 		position: absolute;
+		 		top: 5px;
+		 		left: 80px;
+		 	}
+		 }
+		.connect-icons {
+			max-width: 60px;
+			border-radius: 50%;
+		}
+		.connect-icons:hover {
+			transition: all 0.5s ease-in-out;
+			transform: rotate(360deg);
+			filter: drop-shadow(0 0  30px #ff002b);
+		}
+	}
+}
+
+
+//Tablet
+@media ( min-width: 767px ) {
+	#all {
+		h2 {
+			font-size: 20pt;
+			left: 50%;
+		}
+		#connect {
+			.section {
+				width: 50%;
+			}
+		}
+	}
+}
+
+
+//Desktop
+@media ( min-width: 992px ) {
+	#all {
+		.parallax {
+			height: 600px;
+		}
+		#connect {
+			height: 150px;
+			position: relative;
+			.section {
+				width: 52%;
+				position: absolute;
+				left: 9%;
+			}
+			#section-email {
+				margin-top: 2%;
+			}
+			#section-linkedin {
+				a {
+					top: 16px;
+				}
+			}
+		}
+	}
+}

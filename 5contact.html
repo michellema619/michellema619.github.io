@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Contact | Michelle Ma Portfolio</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<link rel="stylesheet" href="css/5contact.css">
+	<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+	<link href="https://fonts.googleapis.com/css?family=Cinzel|Lovers+Quarrel|Roboto+Slab:100" rel="stylesheet">
+</head>
+
+<body>
+	<div id="header">
+		<img id="home-logo" src="images/final_logo.png">
+
+		<div id="tabs">
+			<img id="mobileMenu" src="images/mobileMenu.png">
+			<ul id="tabs-ul">
+				<li id="home-tab"><a href="index.html"> Home </a></li>
+				<li id="about-tab"><a href="2about.html"> About </a></li>
+				<div id="portfolio">
+					<li id="portfolio-tab"><a href="3all.html"> Portfolio </a>
+					</li>
+				</div>
+				<li id="resume-tab"><a href="4resume.html"> Resume </a></li>
+				<li id="contact-tab"><a href="5contact.html"> Contact </a></li>
+			</ul>
+		</div> <!-- end of tabs -->
+	</div> <!-- end of header-->
+
+<!-- ALL CONTENT -->
+	<div id="all">
+		<div class="parallax"></div>
+		<h2 data-aos="zoom-in-left" data-aos-duration="1000" data-aos-delay="400">Connect with Me!</h2>
+
+		<div id="connect">
+			<div data-aos="fade-left" id="section-email" class="section">
+				<img class="connect-icons" id="email" src="images/email.png">
+				<a class="connect-info" id="connect-info1" href="mailto:hsinyuma@usc.edu">hsinyuma@usc.edu</a>
+			</div>
+			<div data-aos="fade-left" data-aos-offset="10" id="section-linkedin" class="section">
+				<img class="connect-icons" id="linkedin" src="images/linkedin.png">
+				<a class="connect-info" id="connect-info2" href="www.linkedin.com/in/michelle-ma-905b3711b/">www.linkedin.com/in/michelle-ma-905b3711b/</a>
+			</div>
+		</div>	
+	</div>	
+
+	<script src="jquery-3.2.1.min.js"></script>
+	<script src="0header.js"></script>
+	<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+	<script>
+		// Current tab
+		document.querySelector("#contact-tab").style.fontWeight = "bold";
+		document.querySelector("#contact-tab").onmouseenter = function() {
+			document.querySelector("#contact-tab").style.backgroundColor = "inherit";
+			document.querySelector("#contact-tab a").style.cursor = "default";
+		}
+
+		document.querySelector("#email").onmouseenter = function() {
+			document.querySelector("#connect-info1").style.textDecoration = "underline";
+		}
+		document.querySelector("#email").onmouseleave = function() {
+			document.querySelector("#connect-info1").style.textDecoration = "none";
+		}
+		document.querySelector("#linkedin").onmouseenter = function() {
+			document.querySelector("#connect-info2").style.textDecoration = "underline";
+		}
+		document.querySelector("#linkedin").onmouseleave = function() {
+			document.querySelector("#connect-info2").style.textDecoration = "none";
+		}
+
+		
+		// AOS plugin
+		AOS.init();
+	</script>
+</body>
+</html>

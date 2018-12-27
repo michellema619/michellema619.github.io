@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title> Portfolio | Michelle Ma Portfolio</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<link rel="stylesheet" href="css/3all.css">
+	<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+	<link href="https://fonts.googleapis.com/css?family=Cinzel|Lovers+Quarrel|Roboto+Slab:100" rel="stylesheet">
+</head>
+
+<body>
+	<div id="header">
+		<img id="home-logo" src="images/final_logo.png">
+
+		<div id="tabs">
+			<img id="mobileMenu" src="images/mobileMenu.png">
+			<ul id="tabs-ul">
+				<li id="home-tab"><a href="index.html"> Home </a></li>
+				<li id="about-tab"><a href="2about.html"> About </a></li>
+				<div id="portfolio">
+					<li id="portfolio-tab"><a href="3all.html"> Portfolio </a>
+					</li>
+				</div>
+				<li id="resume-tab"><a href="4resume.html"> Resume </a></li>
+				<li id="contact-tab"><a href="5contact.html"> Contact </a></li>
+			</ul>
+		</div> <!-- end of tabs -->
+	</div> <!-- end of header-->
+
+<!-- ALL CONTENT -->
+	<div id="all">
+		<h2 data-aos="fade-left" data-aos-duration="800">Portfolio</h2>
+		<h4 data-aos="fade-left" data-aos-duration="800" data-aos-delay="300">Filter by Categories</h4>
+		<div id="filter-buttons" data-aos="fade-left" data-aos-duration="800" data-aos-delay="600">
+			<div class="filter-button" onclick="groupFilter('data')">Data Analytics</div>
+			<div class="filter-button" onclick="groupFilter('design')">Design</div>
+			<div class="filter-button" onclick="groupFilter('mkt')">Marketing</div>
+			<div class="filter-button" onclick="groupFilter('ux')">User Experience</div>
+		</div>
+
+		<div id="all-shuffle">
+			<img class="shuffle-image" src="images/portfolio/Emma_Watson.png" data-groups='["design"]'>
+			<img class="shuffle-image" src="images/portfolio/IB_Art_9.jpg" data-groups='["design"]'>
+			<img class="shuffle-image" src="images/portfolio/Booklet_p1.png" data-groups='["design"]'>
+			<img class="shuffle-image" src="images/portfolio/Poster_1C.png" data-groups='["design"]'>
+			<img class="shuffle-image" src="images/portfolio/Art_1.jpg" data-groups='["design"]'>
+			<img class="shuffle-image" src="images/portfolio/final_logo.png" data-groups='["design"]'>
+			<img class="shuffle-image" src="images/portfolio/Hot_Cheetos_p1.png" data-groups='["mkt"]'>
+			<img class="shuffle-image" src="images/portfolio/IB_Art_1.jpg" data-groups='["design"]'>
+			<img class="shuffle-image" src="images/portfolio/IB_Art_2.jpg" data-groups='["design"]'>
+			<img class="shuffle-image" src="images/portfolio/IB_Art_3.jpg" data-groups='["design"]'>
+			<img class="shuffle-image" src="images/portfolio/IB_Art_4.jpg" data-groups='["design"]'>
+			<img class="shuffle-image" src="images/portfolio/IB_Art_5.png" data-groups='["design"]'>
+			<img class="shuffle-image" src="images/portfolio/IB_Art_6.jpg" data-groups='["design"]'>
+			<img class="shuffle-image" src="images/portfolio/IB_Art_7.jpg" data-groups='["design"]'>
+			<img class="shuffle-image" src="images/portfolio/IB_Art_8.jpg" data-groups='["design"]'>
+			<img class="shuffle-image" src="images/portfolio/ITP310_Lineup_p1.png" data-groups='["ux"]'>
+			<img class="shuffle-image" src="images/portfolio/Mandala_1.png" data-groups='["design"]'>
+			<img class="shuffle-image" src="images/portfolio/Mandala_3.png" data-groups='["design"]'>
+			<img class="shuffle-image" src="images/portfolio/Mandala_6.png" data-groups='["design"]'>
+			<img class="shuffle-image" src="images/portfolio/Trip_Advisor_p1.png" data-groups='["data"]'>
+			<img class="shuffle-image" src="images/portfolio/Postmates_p1.png" data-groups='["mkt"]'>
+		</div> 
+	</div>
+	<!-- end of ALL CONTENT -->
+
+	<script src="jquery-3.2.1.min.js"></script>
+	<script src="shuffle-5.2.0/dist/shuffle.min.js"></script>
+	<script src="0header.js"></script>
+	<script src="3shuffle.js"></script>
+	<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+	<script>
+		// Current tab
+		document.querySelector("#portfolio-tab").style.fontWeight = "bold";
+		document.querySelector("#portfolio-tab").onmouseenter = function() {
+			document.querySelector("#portfolio-tab").style.backgroundColor = "inherit";
+			document.querySelector("#portfolio-tab a").style.cursor = "default";
+		}
+
+		
+		// AOS plugin
+		AOS.init();
+	</script>
+	
+</body>
+</html>

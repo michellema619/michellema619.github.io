@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Home | Michelle Ma</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<link rel="stylesheet" href="css/1home.css">
+	<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+	
+	<link href="https://fonts.googleapis.com/css?family=Cinzel|Lovers+Quarrel|Roboto+Slab:100" rel="stylesheet">
+</head>
+<body>
+	<div id="welcome">
+		<img id="gif" src="0animation.gif">
+
+		<div class="text">
+			<span id="arrow"> &#846; </span>
+		</div>
+
+		<div class="text" id="click"> 
+			click to enter 
+		</div>
+	</div>  <!-- end of welcome -->
+
+	<div id="header">
+		<img id="home-logo" src="images/final_logo.png">
+
+		<div id="tabs">
+			<img id="mobileMenu" src="images/mobileMenu.png">
+			<ul id="tabs-ul">
+				<li id="home-tab"><a href="index.html"> Home </a></li>
+				<li id="about-tab"><a href="2about.html"> About </a></li>
+				<div id="portfolio">
+					<li id="portfolio-tab"><a href="3all.html"> Portfolio </a>
+					</li>
+				</div>
+				<li id="resume-tab"><a href="4resume.html"> Resume </a></li>
+				<li id="contact-tab"><a href="5contact.html"> Contact </a></li>
+			</ul>
+		</div> <!-- end of tabs -->
+	</div> <!-- end of header-->
+
+<!-- ALL CONTENT -->
+	<div id="all">
+		<div class="parallax"></div>
+		
+		<div data-aos="fade-up" class="text" id="welcome-msg">
+			Hi there, I'm Michelle Ma and welcome to my website!
+		</div>
+
+		<div class="text dash" id="welcome-dash">&mdash;</div>
+
+		<div data-aos="zoom-in-up" class="text" id="welcome-body">
+			With my Business Administration major and Web Technology and Applications minor, I wanted to integrate my front-end developing skills and my consumer-centric mindset.
+			<br><br>
+			I built this personal website by myself using HTML, CSS, Javascript, jQuery and Sass. It showcases a collection of my past works in design, marketing proposals, data analytics and so on.  
+			<br><br>
+			Feel free to browse around  to learn more about me!
+		</div>
+
+		<div class="text dash">&mdash;</div>
+
+		<div data-aos="fade-up" class="text" id="welcome-connect">
+			Connect with Me!
+		</div>
+
+		<div data-aos="fade-up" id="connect">
+			<img class="connect-icons" id="email" src="images/email.png">
+
+			<img class="connect-icons" id="linkedin" src="images/linkedin.png">
+			
+			<div class="text" id="connect-info">
+				<a class="connect-info" id="connect-info1" href="mailto:hsinyuma@usc.edu">hsinyuma@usc.edu</a>
+				<br>
+				<a class="connect-info" id="connect-info2" href="www.linkedin.com/in/michelle-ma-905b3711b/">www.linkedin.com/in/michelle-ma-905b3711b/</a>
+			</div>
+		</div>
+
+	</div> <!-- end of ALL CONTENT -->
+
+	<script src="jquery-3.2.1.min.js"></script>
+	<script src="0header.js"></script>
+	<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+	<script>
+		// welcome dissolves
+		document.querySelector("#gif").onclick = function() {
+			document.querySelector("body").style.overflow = "visible";
+			document.querySelector("#welcome").classList.add("fadeOut");
+			document.querySelector("#welcome").style.zIndex = -99;
+			document.querySelector("body").style.backgroundColor = "#ffe6ea";
+			document.querySelector("#all").style.opacity = 1;
+		}
+
+		// Current tab
+		document.querySelector("#home-tab").style.fontWeight = "bold";
+		document.querySelector("#home-tab").onmouseenter = function() {
+			document.querySelector("#home-tab").style.backgroundColor = "inherit";
+			document.querySelector("#home-tab a").style.cursor = "default";
+		}
+
+		// Connect
+		document.querySelector(".connect-icons").onmouseenter = function() {
+			document.querySelector(".connect-info").style.textDecoration = "underline";
+		}
+		document.querySelector(".connect-icons").onmouseleave = function() {
+			document.querySelector(".connect-info").style.textDecoration = "none";
+		}
+		document.querySelector("#linkedin").onmouseenter = function() {
+			document.querySelector("#connect-info2").style.textDecoration = "underline";
+		}
+		document.querySelector("#linkedin").onmouseleave = function() {
+			document.querySelector("#connect-info2").style.textDecoration = "none";
+		}
+
+		
+		// AOS plugin
+		AOS.init();
+	</script>
+</body>
+</html>
